@@ -30,7 +30,6 @@ import {
   Sun,
   Moon,
   Radio,
-  Sensor,
   Globe,
   BarChart3,
   Settings,

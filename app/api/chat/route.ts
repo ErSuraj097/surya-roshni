@@ -1,10 +1,11 @@
 import { streamText } from "ai"
+import { openai } from "@ai-sdk/openai"
 
 export async function POST(req: Request) {
   const { messages } = await req.json()
 
   const result = streamText({
-    model: "openai/gpt-4o-mini",
+    model: openai("gpt-4o-mini"),
     system: `You are a helpful AI assistant for Suryaroshni Professional Lighting, a leading lighting solutions company in India. 
     
     You help customers with:
@@ -30,5 +31,5 @@ export async function POST(req: Request) {
     messages,
   })
 
-  return result.toUIMessageStreamResponse()
+  return result.toDataStreamResponse()
 }

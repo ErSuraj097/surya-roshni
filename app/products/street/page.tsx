@@ -24,7 +24,7 @@ import {
   Eye,
   MapPin,
   Gauge,
-  Sensor,
+  Activity,
   Settings,
   TreePine,
   Car,
@@ -286,7 +286,7 @@ export default function StreetLightingPage() {
     {
       title: "Predictive Maintenance",
       description: "AI-powered maintenance scheduling to prevent failures",
-      icon: Sensor,
+      icon: Activity,
       benefits: ["Reduced downtime", "Lower maintenance costs", "Extended lifespan", "Improved reliability"],
     },
   ]

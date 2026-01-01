@@ -4,6 +4,7 @@ import { useRef } from "react"
 import { Canvas, useFrame } from "@react-three/fiber"
 import { OrbitControls, Environment, Float, MeshTransmissionMaterial } from "@react-three/drei"
 import type { Mesh, Group } from "three"
+import { Color } from "three"
 
 function AnimatedLightBulb() {
   const meshRef = useRef<Mesh>(null)
@@ -27,7 +28,7 @@ function AnimatedLightBulb() {
         <mesh ref={meshRef} position={[0, 0, 0]}>
           <sphereGeometry args={[1, 32, 32]} />
           <MeshTransmissionMaterial
-            background="#ffffff"
+            background={new Color("#ffffff")}
             transmission={0.95}
             roughness={0.1}
             thickness={0.5}

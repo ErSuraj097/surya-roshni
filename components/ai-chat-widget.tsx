@@ -57,13 +57,13 @@ export function AIChatWidget() {
   const handleSampleQuestion = (question: string) => {
     const staticAnswer = STATIC_QA.get(question)
     if (staticAnswer) {
-      append({
-        role: "user",
-        content: question,
-      }, {
-        role: "assistant",
-        content: staticAnswer,
-      })
+      // Add user message and static assistant response directly
+      const newMessages: Array<{ id: string; role: "user" | "assistant"; content: string }> = [
+        ...messages as Array<{ id: string; role: "user" | "assistant"; content: string }>,
+        { id: `user-${Date.now()}`, role: "user", content: question },
+        { id: `assistant-${Date.now()}`, role: "assistant", content: staticAnswer }
+      ]
+      setMessages(newMessages)
     } else {
       append({
         role: "user",
