@@ -11,23 +11,18 @@ import {
   Moon,
   Zap,
   Shield,
-  Wifi,
   Clock,
-  Award,
   ChevronRight,
   ChevronDown,
   Menu,
   X,
   CheckCircle,
-  Star,
   Download,
   Eye,
   MapPin,
   Gauge,
   Activity,
   Settings,
-  TreePine,
-  Car,
 } from "lucide-react"
 import Link from "next/link"
 import { gsap } from "gsap"
