@@ -1,0 +1,227 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* =========================================================
+   ROOT – LIGHT MODE
+========================================================= */
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+
+  --card: #FFFFFF;
+  --card-foreground: #000000;
+
+  --popover: #FFFFFF;
+  --popover-foreground: #000000;
+
+  /* Brand */
+  --primary: #002877;
+  --primary-foreground: #FFFFFF;
+
+  /* Accent */
+  --secondary: #AEDEFC;
+  --secondary-foreground: #000000;
+
+  /* Soft / Calm */
+  --muted: #EDFFF0;
+  --muted-foreground: #000000;
+
+  --accent: #001d61;
+  --accent-foreground: #FFFFFF;
+
+  --accent-glow: #2e004d;
+  --accent-warm: #AEDEFC;
+  --accent-subtle: #EDFFF0;
+
+  --destructive: #F875AA;
+  --destructive-foreground: #FFFFFF;
+
+  --border: #E5E7EB;
+  --input: #E5E7EB;
+  --ring: #F875AA;
+
+  /* Charts */
+  --chart-1: #F875AA;
+  --chart-2: #AEDEFC;
+  --chart-3: #EDFFF0;
+  --chart-4: #000000;
+  --chart-5: #D85C8E;
+
+  --radius: 0.75rem;
+
+  /* Sidebar */
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #000000;
+  --sidebar-primary: #F875AA;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #AEDEFC;
+  --sidebar-accent-foreground: #000000;
+  --sidebar-border: #E5E7EB;
+  --sidebar-ring: #F875AA;
+}
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+.dark {
+  --background: #0B0B0B;
+  --foreground: #FFFFFF;
+
+  --card: #151515;
+  --card-foreground: #FFFFFF;
+
+  --popover: #151515;
+  --popover-foreground: #FFFFFF;
+
+  --primary: #F875AA;
+  --primary-foreground: #000000;
+
+  --secondary: #AEDEFC;
+  --secondary-foreground: #000000;
+
+  --muted: #1F1F1F;
+  --muted-foreground: #EDFFF0;
+
+  --accent: #F875AA;
+  --accent-foreground: #000000;
+
+  --accent-glow: #F875AA;
+  --accent-warm: #AEDEFC;
+  --accent-subtle: #1F1F1F;
+
+  --destructive: #F875AA;
+  --destructive-foreground: #000000;
+
+  --border: #2A2A2A;
+  --input: #2A2A2A;
+  --ring: #F875AA;
+
+  --chart-1: #F875AA;
+  --chart-2: #AEDEFC;
+  --chart-3: #EDFFF0;
+  --chart-4: #FFFFFF;
+  --chart-5: #D85C8E;
+
+  --sidebar: #0B0B0B;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #F875AA;
+  --sidebar-primary-foreground: #000000;
+  --sidebar-accent: #AEDEFC;
+  --sidebar-accent-foreground: #000000;
+  --sidebar-border: #2A2A2A;
+  --sidebar-ring: #F875AA;
+}
+
+/* =========================================================
+   TAILWIND THEME BINDINGS
+========================================================= */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-glow: var(--accent-glow);
+  --color-accent-warm: var(--accent-warm);
+  --color-accent-subtle: var(--accent-subtle);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+/* =========================================================
+   BASE
+========================================================= */
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent-glow);
+  border-radius: 5px;
+}
+
+/* =========================================================
+   ANIMATIONS & EFFECTS
+========================================================= */
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-16px); }
+}
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-in-up {
+  animation: fade-up 0.8s ease-out forwards;
+}
+
+/* =========================================================
+   PROFESSIONAL COMPONENT STYLES
+========================================================= */
+.professional-card {
+  background: linear-gradient(145deg, #ffffff, #f7f7f7);
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+.professional-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.professional-button {
+  background: linear-gradient(135deg, var(--primary), var(--accent-warm));
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.professional-button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
