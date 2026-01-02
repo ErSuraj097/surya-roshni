@@ -42,9 +42,9 @@ export const NAV_ITEMS: NavItem[] = [
     children: [
       { name: "About Us", href: "/company/about", description: "Learn about our history and mission" },
       { name: "Our Story", href: "/company/story", description: "The journey of Surya Roshni" },
-      { name: "Leadership", href: "/company/leadership", description: "Meet our leadership team" },
-      { name: "Careers", href: "/company/careers", description: "Join our growing team" },
-      { name: "CSR", href: "/company/csr", description: "Corporate social responsibility" },
+      { name: "Leadership", href: "#", description: "Meet our leadership team" },
+      { name: "Careers", href: "#", description: "Join our growing team" },
+      { name: "CSR", href: "#", description: "Corporate social responsibility" },
     ],
   },
   {
@@ -61,21 +61,21 @@ export const NAV_ITEMS: NavItem[] = [
   {
     name: "Solutions",
     children: [
-      { name: "Smart Lighting", href: "/solutions/smart", description: "IoT-enabled smart systems" },
-      { name: "Energy Management", href: "/solutions/energy", description: "Optimize energy consumption" },
-      { name: "Automation Systems", href: "/solutions/automation", description: "Automated lighting control" },
-      { name: "Consulting Services", href: "/solutions/consulting", description: "Expert lighting consultation" },
+      { name: "Smart Lighting", href: "#", description: "IoT-enabled smart systems" },
+      { name: "Energy Management", href: "/#", description: "Optimize energy consumption" },
+      { name: "Automation Systems", href: "#", description: "Automated lighting control" },
+      { name: "Consulting Services", href: "#", description: "Expert lighting consultation" },
     ],
   },
   {
     name: "Applications",
     children: [
-      { name: "Offices & Commercial", href: "/applications/commercial", description: "Corporate workspace lighting" },
-      { name: "Industrial & Warehouses", href: "/applications/industrial", description: "Industrial facility lighting" },
-      { name: "Retail & Hospitality", href: "/applications/retail", description: "Retail and hotel lighting" },
-      { name: "Outdoor & Street", href: "/applications/outdoor", description: "Public space lighting" },
-      { name: "Healthcare", href: "/applications/healthcare", description: "Hospital and clinic lighting" },
-      { name: "Education", href: "/applications/education", description: "School and university lighting" },
+      { name: "Offices & Commercial", href: "#", description: "Corporate workspace lighting" },
+      { name: "Industrial & Warehouses", href: "#", description: "Industrial facility lighting" },
+      { name: "Retail & Hospitality", href: "#", description: "Retail and hotel lighting" },
+      { name: "Outdoor & Street", href: "#", description: "Public space lighting" },
+      { name: "Healthcare", href: "#", description: "Hospital and clinic lighting" },
+      { name: "Education", href: "#", description: "School and university lighting" },
     ],
   },
   {
