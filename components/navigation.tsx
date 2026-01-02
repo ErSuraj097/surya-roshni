@@ -239,16 +239,11 @@ export function Navigation({
               transition={{ duration: 0.3 }}
               className="relative"
             >
-              <Lightbulb className="h-8 w-8 text-accent-glow" />
-              <motion.div
-                className="absolute inset-0 bg-accent-glow/20 rounded-full blur-lg"
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              />
+          
+              
             </motion.div>
-            <span className="text-xl font-bold text-foreground group-hover:text-accent-glow transition-colors">
-              Surya <span className="text-red-900">Roshni</span>
-            </span>
+            
+            <img src="/logo1.svg" alt="" className="w-[60%]" />
           </Link>
 
           {/* Desktop Navigation */}

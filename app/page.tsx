@@ -361,7 +361,7 @@ export default function HomePage() {
             animate="visible"
             variants={headingVariants}
             transition={{ duration: 1, delay: 0.2 }}
-            className="text-4xl text-red-900 md:text-6xl lg:text-7xl font-bold text-balance leading-tight"
+            className="text-4xl text-red-700 md:text-6xl lg:text-7xl font-bold text-balance leading-tight"
           >
             {slide.heading}
           </motion.h1>
